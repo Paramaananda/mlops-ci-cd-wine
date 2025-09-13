@@ -13,12 +13,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy source code
 COPY src/ ./src
 COPY main.py .
+COPY best_model.joblib ./best_model.joblib  
 
-# Copy model artifact (dari workflow download)
-COPY models/model.joblib ./models/model.joblib
+# di-copy dari artifact pipeline
 
 # Expose port
 EXPOSE 5000
 
-# Start Flask API
+# Start Flask API (kalau ada API di main.py)
 CMD ["python", "main.py"]

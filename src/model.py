@@ -1,12 +1,12 @@
-from sklearn.ensemble import RandomForestClassifier
 import joblib
+from sklearn.ensemble import RandomForestClassifier
 
-MODEL_PATH = "best_model.joblib"
+MODEL_PATH = "models/model.joblib"
 
 def train_model(X_train, y_train):
-    model = RandomForestClassifier(random_state=42)
-    model.fit(X_train, y_train)
-    return model
+    clf = RandomForestClassifier(n_estimators=100, random_state=42)
+    clf.fit(X_train, y_train)
+    return clf
 
 def save_model(model, path=MODEL_PATH):
     joblib.dump(model, path)

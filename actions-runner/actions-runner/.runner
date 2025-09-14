@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 22,
+  "agentName": "ANAND-DELL",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus14.actions.githubusercontent.com/WJ4Iv9hZ4NLfDLEEqydUjoM2P5PHNQVqZubXsvWOkNH4rDB9p2/",
+  "gitHubUrl": "https://github.com/Paramaananda/mlops-ci-cd-wine",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}

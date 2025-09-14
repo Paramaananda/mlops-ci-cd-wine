@@ -1,0 +1,69 @@
+[2025-09-14 13:44:03Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Root': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO HostContext] Well known config file 'Credentials': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.credentials'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Root': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO HostContext] Well known config file 'Runner': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.runner'
+[2025-09-14 13:44:03Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2025-09-14 13:44:03Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.26100.
+[2025-09-14 13:44:03Z INFO Listener] Version: 2.328.0
+[2025-09-14 13:44:03Z INFO Listener] Commit: 6f9a9110adce65f44ca6f7c0ae142b9cc6af937b
+[2025-09-14 13:44:03Z INFO Listener] Culture: en-US
+[2025-09-14 13:44:03Z INFO Listener] UI Culture: en-US
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Root': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO Listener] Validating directory permissions for: 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO CommandLineParser] Parse
+[2025-09-14 13:44:03Z INFO CommandLineParser] Parsing 1 args
+[2025-09-14 13:44:03Z INFO CommandLineParser] parsing argument
+[2025-09-14 13:44:03Z INFO CommandLineParser] HasArgs: False
+[2025-09-14 13:44:03Z INFO CommandLineParser] Adding Command: remove
+[2025-09-14 13:44:03Z INFO Listener] Arguments parsed
+[2025-09-14 13:44:03Z INFO Runner] ExecuteCommand
+[2025-09-14 13:44:03Z INFO ConfigurationStore] currentAssemblyLocation: D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin\Runner.Listener.dll
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO ConfigurationStore] binPath: D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Root': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO ConfigurationStore] RootFolder: D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Root': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO HostContext] Well known config file 'Runner': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.runner'
+[2025-09-14 13:44:03Z INFO ConfigurationStore] ConfigFilePath: D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.runner
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Root': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO HostContext] Well known config file 'MigratedRunner': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.runner_migrated'
+[2025-09-14 13:44:03Z INFO ConfigurationStore] MigratedConfigFilePath: D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.runner_migrated
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Root': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO HostContext] Well known config file 'Credentials': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.credentials'
+[2025-09-14 13:44:03Z INFO ConfigurationStore] CredFilePath: D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.credentials
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Root': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO HostContext] Well known config file 'MigratedCredentials': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.credentials_migrated'
+[2025-09-14 13:44:03Z INFO ConfigurationStore] MigratedCredFilePath: D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.credentials_migrated
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Bin': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\bin'
+[2025-09-14 13:44:03Z INFO HostContext] Well known directory 'Root': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner'
+[2025-09-14 13:44:03Z INFO HostContext] Well known config file 'Service': 'D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.service'
+[2025-09-14 13:44:03Z INFO ConfigurationStore] ServiceConfigFilePath: D:\A Teknik Informatika\TUGAS TIF\Semester 7\MLOps\mlops-ci-cd-wine\actions-runner\actions-runner\.service
+[2025-09-14 13:44:03Z INFO CommandSettings] Flag 'help': 'False'
+[2025-09-14 13:44:03Z INFO CommandSettings] Flag 'version': 'False'
+[2025-09-14 13:44:03Z INFO CommandSettings] Flag 'commit': 'False'
+[2025-09-14 13:44:03Z INFO CommandSettings] Flag 'check': 'False'
+[2025-09-14 13:44:03Z INFO CommandSettings] Command 'configure': 'False'
+[2025-09-14 13:44:03Z INFO CommandSettings] Command 'remove': 'True'
+[2025-09-14 13:44:03Z INFO CommandSettings] Flag 'local': 'False'
+[2025-09-14 13:44:03Z INFO ConfigurationStore] IsServiceConfigured()
+[2025-09-14 13:44:03Z INFO ConfigurationStore] IsServiceConfigured: False
+[2025-09-14 13:44:03Z INFO ConfigurationStore] IsConfigured()
+[2025-09-14 13:44:03Z INFO ConfigurationStore] IsConfigured: True
+[2025-09-14 13:44:03Z INFO ConfigurationStore] HasCredentials()
+[2025-09-14 13:44:03Z INFO ConfigurationStore] stored True
+[2025-09-14 13:44:03Z INFO ConfigurationStore] Read setting file: 404 chars
+[2025-09-14 13:44:03Z INFO CommandSettings] Arg 'token': ''
+[2025-09-14 13:44:03Z INFO CommandSettings] Flag 'unattended': 'False'
+[2025-09-14 13:44:03Z INFO PromptManager] ReadValue
+[2025-09-14 13:44:03Z INFO Terminal] WRITE: Enter runner remove token: 
+[2025-09-14 13:44:03Z INFO Terminal] READ SECRET
+[2025-09-14 13:44:45Z INFO Terminal] WRITE LINE: Exiting...

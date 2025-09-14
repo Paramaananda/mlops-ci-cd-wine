@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "Paramaananda/mlops-ci-cd-wine",
+  "pipelineDirectory": "mlops-ci-cd-wine",
+  "workspaceDirectory": "mlops-ci-cd-wine\\mlops-ci-cd-wine",
+  "repositories": {
+    "Paramaananda/mlops-ci-cd-wine": {
+      "repositoryPath": "mlops-ci-cd-wine\\mlops-ci-cd-wine",
+      "lastRunOn": "09/14/2025 20:50:59 +07:00"
+    }
+  },
+  "lastRunOn": "09/14/2025 21:14:31 +07:00"
+}

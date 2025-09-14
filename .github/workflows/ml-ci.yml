@@ -11,7 +11,7 @@ env:
 
 jobs:
   test-and-train:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest   # ⬅ pakai server GitHub, bukan self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -38,11 +38,15 @@ jobs:
         with:
           name: ${{ env.MODEL_ARTIFACT_NAME }}
           path: ./best_model.joblib
-
+          
   build-and-deploy:
     runs-on: self-hosted
     needs: test-and-train
     steps:
+      - name: Allow PowerShell scripts
+        run: Set-ExecutionPolicy Bypass -Scope Process -Force
+        shell: pwsh
+
       - name: Checkout code
         uses: actions/checkout@v4
 

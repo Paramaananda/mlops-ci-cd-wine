@@ -1,0 +1,7 @@
+flask
+scikit-learn
+joblib
+pytest
+mlflow
+dvc[gs]
+numpy

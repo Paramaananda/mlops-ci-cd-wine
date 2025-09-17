@@ -34,7 +34,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.DVC_SSH_HOST }} >> ~/.ssh/known_hosts
 
-      - name: DVC Pull (sync dataset dari remote)
+      - name: DVC Pull
         run: dvc pull -v
 
       - name: Run Unit Tests
@@ -43,7 +43,7 @@ jobs:
       - name: Train and Evaluate Model
         run: python main.py
 
-      - name: DVC Push (kalau ada update dataset atau cache baru)
+      - name: DVC Push 
         run: dvc push -v
 
       - name: Upload model artifact

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/678014234083417484/9f649c296b974d6ca59e818343fd13ce/artifacts
+end_time: 1758138566299
+entry_point_name: ''
+experiment_id: '678014234083417484'
+lifecycle_stage: active
+run_id: 9f649c296b974d6ca59e818343fd13ce
+run_name: glamorous-zebra-498
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758138555787
+status: 3
+tags: []
+user_id: Anand

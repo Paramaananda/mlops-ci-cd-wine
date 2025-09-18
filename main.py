@@ -16,9 +16,10 @@ METRICS_PATH = "metrics.json"
 
 if __name__ == "__main__":
     # ==============================
-    # Setup MLflow local tracking
+    # Setup MLflow server tracking
     # ==============================
-    mlflow.set_tracking_uri("file:./mlruns") 
+    mlflow_tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "http://localhost:5000")
+    mlflow.set_tracking_uri(mlflow_tracking_uri)
     experiment_name = "wine-quality"
     mlflow.set_experiment(experiment_name)
 
@@ -69,7 +70,6 @@ if __name__ == "__main__":
             mlflow.log_param("max_depth", model.max_depth)
         if hasattr(model, "random_state"):
             mlflow.log_param("random_state", model.random_state)
-
         mlflow.log_param("model_type", type(model).__name__)
 
         # ==== METRICS ====
@@ -77,28 +77,28 @@ if __name__ == "__main__":
             mlflow.log_metric(key, value)
 
         # ==== ARTIFACTS ====
-        # 1. Model & scaler manual
+        mlflow.sklearn.log_model(
+            sk_model=model,
+            artifact_path="model",
+            input_example=np.array([X_test[0]])
+        )
         mlflow.log_artifact(MODEL_PATH)
         mlflow.log_artifact(SCALER_PATH)
-
-        # 2. Simpan metrics.json
         mlflow.log_artifact(METRICS_PATH)
 
-        # 3. Confusion matrix plot
+        # Confusion matrix
         disp = ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
         plt.savefig("confusion_matrix.png")
         mlflow.log_artifact("confusion_matrix.png")
         plt.close()
 
-        # 4. requirements.txt (jika ada)
+        # requirements.txt (jika ada)
         if os.path.exists("requirements.txt"):
             mlflow.log_artifact("requirements.txt")
 
-        # ==== VERSION CONTROL INFO ====
+        # Git commit hash
         try:
-            commit_hash = subprocess.check_output(
-                ["git", "rev-parse", "HEAD"]
-            ).decode("utf-8").strip()
+            commit_hash = subprocess.check_output(["git", "rev-parse", "HEAD"]).decode("utf-8").strip()
             mlflow.log_param("git_commit", commit_hash)
         except Exception as e:
             print(f"⚠️ Gagal mengambil git commit hash: {e}")

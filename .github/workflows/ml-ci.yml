@@ -8,6 +8,7 @@ on:
 
 env:
   MODEL_ARTIFACT_NAME: trained-model
+  MLFLOW_TRACKING_URI: http://localhost:5000  # server MLflow
 
 jobs:
   test-and-train:
@@ -42,6 +43,8 @@ jobs:
 
       - name: Train and Evaluate Model
         run: python main.py
+        env:
+          MLFLOW_TRACKING_URI: ${{ env.MLFLOW_TRACKING_URI }}
 
       - name: DVC Push 
         run: dvc push -v
@@ -54,12 +57,6 @@ jobs:
             ./best_model.joblib
             ./scaler.joblib
             ./metrics.json
-
-      - name: Upload MLflow runs
-        uses: actions/upload-artifact@v4
-        with:
-          name: mlruns
-          path: ./mlruns
 
   build-and-deploy:
     runs-on: ubuntu-latest

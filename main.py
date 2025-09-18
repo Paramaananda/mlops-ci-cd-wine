@@ -78,11 +78,12 @@ if __name__ == "__main__":
             mlflow.log_metric(key, value)
 
         # ==== ARTIFACTS ====
-        mlflow.sklearn.log_model(
+        mlflow.log_model(
             sk_model=model,
             artifact_path="model",
             input_example=np.array([X_test[0]])
         )
+
         mlflow.log_artifact(MODEL_PATH)
         mlflow.log_artifact(SCALER_PATH)
         mlflow.log_artifact(METRICS_PATH)

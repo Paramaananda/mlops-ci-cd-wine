@@ -4,7 +4,6 @@ from src.evaluate import evaluate_model
 import json
 import joblib
 import mlflow
-import mlflow.sklearn
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import ConfusionMatrixDisplay
@@ -56,8 +55,6 @@ if __name__ == "__main__":
     # ==============================
     # Logging ke MLflow
     # ==============================
-    input_example = np.array([X_test[0]])
-
     with mlflow.start_run(run_name=run_name):
         # ==== PARAMS: data info ====
         mlflow.log_param("n_features", X_train.shape[1])
@@ -80,12 +77,9 @@ if __name__ == "__main__":
             mlflow.log_metric(key, value)
 
         # ==== ARTIFACTS ====
-        # 1. Simpan model
-        mlflow.sklearn.log_model(
-            sk_model=model,
-            artifact_path="model",
-            input_example=input_example
-        )
+        # 1. Model & scaler manual
+        mlflow.log_artifact(MODEL_PATH)
+        mlflow.log_artifact(SCALER_PATH)
 
         # 2. Simpan metrics.json
         mlflow.log_artifact(METRICS_PATH)

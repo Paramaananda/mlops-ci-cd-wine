@@ -8,7 +8,7 @@ def test_predict_new():
     X_train, X_test, y_train, y_test, scaler = load_and_preprocess()
     model = train_model(X_train, y_train)
     save_model(model)
-    joblib.dump(scaler, "scaler.joblib")  # ✅ fix disini
+    joblib.dump(scaler, "scaler.joblib")  
 
     sample = X_test[0]
     pred = predict_new(sample)

@@ -17,7 +17,7 @@ METRICS_PATH = "metrics.json"
 
 if __name__ == "__main__":
     # Setup MLflow (pastikan server MLflow sudah jalan)
-    mlflow.set_tracking_uri("http://localhost:5000")
+    mlflow.set_tracking_uri("file:./mlruns") 
     experiment_name = "wine-quality"
     mlflow.set_experiment(experiment_name)
 

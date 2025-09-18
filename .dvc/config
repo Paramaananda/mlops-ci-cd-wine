@@ -2,3 +2,4 @@
     remote = myremote
 ['remote "myremote"']
     url = ssh://volare@103.197.189.19:22/home/volare/dvc-experiment-folder
+    keyfile = /home/volare/.ssh/id_rsa

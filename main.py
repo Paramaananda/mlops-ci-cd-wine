@@ -16,11 +16,9 @@ METRICS_PATH = "metrics.json"
 
 if __name__ == "__main__":
     # ==============================
-    # Setup MLflow tracking
+    # Setup MLflow tracking (SERVER)
     # ==============================
-    mlflow_tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "file:./mlruns")
-    mlflow.set_tracking_uri(mlflow_tracking_uri)
-
+    mlflow.set_tracking_uri("http://103.197.189.19:5000")
     experiment_name = "wine-quality"
     mlflow.set_experiment(experiment_name)
 
@@ -48,14 +46,14 @@ if __name__ == "__main__":
     with open(METRICS_PATH, "w") as f:
         json.dump(metrics, f)
 
-    # Simpan model & scaler
+    # Simpan model & scaler secara lokal (untuk DVC)
     save_model(model, MODEL_PATH)
     joblib.dump(scaler, SCALER_PATH)
     print(f"✅ Model disimpan ke '{MODEL_PATH}'")
     print(f"✅ Scaler disimpan ke '{SCALER_PATH}'")
 
     # ==============================
-    # Logging ke MLflow
+    # Logging ke MLflow (SERVER)
     # ==============================
     with mlflow.start_run(run_name=run_name):
         # ==== PARAMS: data info ====
@@ -77,13 +75,15 @@ if __name__ == "__main__":
         for key, value in metrics.items():
             mlflow.log_metric(key, value)
 
-        # ==== ARTIFACTS ====
-        mlflow.log_model(
+        # ==== MODEL (langsung log ke MLflow) ====
+        import mlflow.sklearn
+        mlflow.sklearn.log_model(
             sk_model=model,
             artifact_path="model",
-            input_example=np.array([X_test[0]])
+            registered_model_name="wine_quality_model"
         )
 
+        # ==== ARTIFACTS ====
         mlflow.log_artifact(MODEL_PATH)
         mlflow.log_artifact(SCALER_PATH)
         mlflow.log_artifact(METRICS_PATH)

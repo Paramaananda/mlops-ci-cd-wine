@@ -27,12 +27,14 @@ jobs:
           pip install -r requirements.txt
           pip install pytest dvc[ssh] mlflow matplotlib scikit-learn joblib
 
-      - name: Setup SSH
+      - name: Setup SSH (DVC + MLflow)
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.DVC_SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.DVC_SSH_HOST }} >> ~/.ssh/known_hosts
+          # test koneksi
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DVC_SSH_USER }}@${{ secrets.DVC_SSH_HOST }} "echo 'SSH OK'"
 
       - name: DVC Pull
         run: dvc pull -v
@@ -41,6 +43,8 @@ jobs:
         run: pytest tests/ --maxfail=1 --disable-warnings -q
 
       - name: Train and Evaluate Model
+        env:
+          MLFLOW_TRACKING_URI: ssh://volare@103.197.189.19/home/volare/mlruns
         run: python main.py
 
       - name: DVC Push 
@@ -67,6 +71,12 @@ jobs:
         with:
           name: ${{ env.MODEL_ARTIFACT_NAME }}
           path: ./
+
+      - name: Download MLflow runs
+        uses: actions/download-artifact@v4
+        with:
+          name: mlruns
+          path: ./mlruns/
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3

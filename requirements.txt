@@ -5,3 +5,4 @@ pytest
 mlflow
 dvc[gs]
 numpy
+pandas

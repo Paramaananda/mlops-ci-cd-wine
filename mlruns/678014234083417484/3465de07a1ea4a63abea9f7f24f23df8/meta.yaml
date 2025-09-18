@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/678014234083417484/3465de07a1ea4a63abea9f7f24f23df8/artifacts
+end_time: 1758168064178
+entry_point_name: ''
+experiment_id: '678014234083417484'
+lifecycle_stage: active
+run_id: 3465de07a1ea4a63abea9f7f24f23df8
+run_name: wine_quality_run_v12
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758168058482
+status: 4
+tags: []
+user_id: Anand
